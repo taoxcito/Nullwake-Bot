@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0b0b12">
+    <meta name="theme-color" content="#08080d">
 
 ```
-<title>Condiciones de Servicio | Nullwake Bot</title>
+<title>Condiciones de Servicio | Nullwake-Bot</title>
 
 <style>
     * {
@@ -20,8 +20,9 @@
 
     body {
         margin: 0;
+        min-height: 100vh;
         background:
-            radial-gradient(circle at top, rgba(139, 92, 246, 0.12), transparent 35%),
+            radial-gradient(circle at 50% -10%, rgba(139, 92, 246, 0.18), transparent 35%),
             #08080d;
         color: #d7d7e2;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -29,24 +30,83 @@
         line-height: 1.75;
     }
 
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        background: rgba(8, 8, 13, 0.88);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid rgba(139, 92, 246, 0.16);
+    }
+
+    .nav-inner {
+        width: min(1100px, calc(100% - 32px));
+        min-height: 68px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .brand {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 3px;
+        white-space: nowrap;
+    }
+
+    .brand span {
+        color: #b77cff;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 9px 14px;
+        color: #9292a5;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: 0.2s ease;
+    }
+
+    .nav-link:hover {
+        color: #ffffff;
+        background: rgba(139, 92, 246, 0.09);
+    }
+
+    .nav-link.active {
+        color: #ffffff;
+        background: rgba(139, 92, 246, 0.14);
+        box-shadow: inset 0 0 0 1px rgba(183, 124, 255, 0.12);
+    }
+
     .container {
         width: min(920px, calc(100% - 32px));
-        margin: 60px auto;
+        margin: 55px auto 40px;
     }
 
     header {
         text-align: center;
-        margin-bottom: 35px;
+        margin-bottom: 32px;
     }
 
     .logo {
         display: inline-block;
         margin-bottom: 15px;
         color: #b77cff;
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 700;
-        letter-spacing: 4px;
-        text-transform: uppercase;
+        letter-spacing: 5px;
     }
 
     h1 {
@@ -57,9 +117,15 @@
     }
 
     .subtitle {
-        margin-top: 12px;
+        margin-top: 10px;
         color: #88889c;
         font-size: 15px;
+    }
+
+    .date {
+        margin-top: 6px;
+        color: #626276;
+        font-size: 13px;
     }
 
     .card {
@@ -67,12 +133,11 @@
         background: rgba(17, 17, 27, 0.94);
         border: 1px solid #29293c;
         border-radius: 18px;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.38);
     }
 
     h2 {
-        margin-top: 42px;
-        margin-bottom: 12px;
+        margin: 42px 0 12px;
         color: #c18aff;
         font-size: 21px;
         line-height: 1.4;
@@ -116,22 +181,62 @@
         border-radius: 8px;
     }
 
-    .date {
-        color: #707085;
-        font-size: 13px;
+    .back-container {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .back-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 18px;
+        border: 1px solid #303044;
+        border-radius: 9px;
+        color: #a5a5b7;
+        background: rgba(17, 17, 27, 0.75);
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.2s ease;
+    }
+
+    .back-button:hover {
+        color: #ffffff;
+        border-color: #8151c7;
+        background: rgba(139, 92, 246, 0.10);
+        text-decoration: none;
+        transform: translateY(-1px);
     }
 
     footer {
-        margin-top: 25px;
+        margin: 25px 0;
         text-align: center;
-        color: #626276;
+        color: #555568;
         font-size: 13px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
+        .nav-inner {
+            min-height: 62px;
+        }
+
+        .brand {
+            font-size: 13px;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            gap: 2px;
+        }
+
+        .nav-link {
+            padding: 8px 9px;
+            font-size: 12px;
+        }
+
         .container {
             width: min(100% - 20px, 920px);
-            margin: 25px auto;
+            margin-top: 30px;
         }
 
         .card {
@@ -143,6 +248,20 @@
             font-size: 19px;
         }
     }
+
+    @media (max-width: 450px) {
+        .nav-inner {
+            flex-direction: column;
+            justify-content: center;
+            padding: 10px 0;
+            gap: 6px;
+        }
+
+        .nav-links {
+            width: 100%;
+            justify-content: center;
+        }
+    }
 </style>
 ```
 
@@ -150,16 +269,39 @@
 
 <body>
 
+<nav class="navbar">
+    <div class="nav-inner">
+
+```
+    <a href="index.html" class="brand">
+        NULL<span>WAKE</span>
+    </a>
+
+    <div class="nav-links">
+        <a href="index.html" class="nav-link active">
+            Condiciones de Servicio
+        </a>
+
+        <a href="privacy.html" class="nav-link">
+            Política de Privacidad
+        </a>
+    </div>
+
+</div>
+```
+
+</nav>
+
 <div class="container">
 
 ```
 <header>
-    <div class="logo">NULLWAKE</div>
+    <div class="logo">NULLWAKE-BOT</div>
 
     <h1>Condiciones de Servicio</h1>
 
     <div class="subtitle">
-        Nullwake Bot
+        Términos y condiciones de uso
     </div>
 
     <div class="date">
@@ -171,10 +313,9 @@
 
     <p>
         Estas Condiciones de Servicio ("Condiciones") regulan el uso de
-        <strong>Nullwake Bot</strong> (el "Bot"), un servicio desarrollado
-        y operado por <strong>taoxcito</strong>
-        ("nosotros", "nuestro" o "el desarrollador") dentro de la
-        plataforma Discord.
+        <strong>Nullwake-Bot</strong> (el "Bot"), un servicio desarrollado
+        y operado por <strong>taoxcito</strong> ("nosotros", "nuestro"
+        o "el desarrollador") dentro de la plataforma Discord.
     </p>
 
     <p>
@@ -187,7 +328,7 @@
     <h2>1. Descripción del servicio</h2>
 
     <p>
-        Nullwake Bot es una aplicación desarrollada para Discord que puede
+        Nullwake-Bot es una aplicación desarrollada para Discord que puede
         proporcionar funcionalidades relacionadas con economía virtual,
         administración, moderación y otras herramientas para servidores
         y usuarios.
@@ -273,7 +414,7 @@
     </p>
 
     <p>
-        El desarrollador de Nullwake Bot no se responsabiliza de las
+        El desarrollador de Nullwake-Bot no se responsabiliza de las
         decisiones de moderación tomadas por administradores utilizando
         las funcionalidades del Bot.
     </p>
@@ -341,12 +482,12 @@
     <h2>10. Relación con Discord</h2>
 
     <p>
-        Nullwake Bot es una aplicación de terceros que funciona mediante
+        Nullwake-Bot es una aplicación de terceros que funciona mediante
         Discord.
     </p>
 
     <p>
-        Nullwake Bot no es propiedad, patrocinado, respaldado ni
+        Nullwake-Bot no es propiedad, patrocinado, respaldado ni
         administrado por Discord, salvo que se indique expresamente
         lo contrario.
     </p>
@@ -357,8 +498,10 @@
     </p>
 
     <p>
-        <a href="https://discord.com/terms" target="_blank" rel="noopener">
-            Ver las Condiciones de Servicio de Discord
+        <a href="https://discord.com/terms"
+           target="_blank"
+           rel="noopener noreferrer">
+            Ver las Condiciones de Servicio de Discord →
         </a>
     </p>
 
@@ -366,7 +509,7 @@
 
     <p>
         El código, diseño, nombre, logotipos, elementos gráficos y demás
-        componentes propios de Nullwake Bot pertenecen a sus respectivos
+        componentes propios de Nullwake-Bot pertenecen a sus respectivos
         propietarios.
     </p>
 
@@ -394,19 +537,30 @@
     </p>
 
     <p>
-        <strong>Correo:</strong>
-        taoxcito@proton.me
+        <strong>Responsable:</strong> taoxcito
     </p>
 
     <p>
-        <strong>Discord:</strong>
-        taoxcito
+        <strong>Correo:</strong>
+        <a href="mailto:taoxcito@proton.me">
+            taoxcito@proton.me
+        </a>
+    </p>
+
+    <p>
+        <strong>Discord:</strong> taoxcito
     </p>
 
 </main>
 
+<div class="back-container">
+    <a href="javascript:history.back()" class="back-button">
+        ← Volver
+    </a>
+</div>
+
 <footer>
-    © 2026 Nullwake · Nullwake Bot
+    © 2026 taoxcito · Nullwake-Bot
 </footer>
 ```
 
