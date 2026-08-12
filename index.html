@@ -1,109 +1,414 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b12">
 
-    <title>Terms of Service - Nullwake Bot</title>
+```
+<title>Condiciones de Servicio | Nullwake Bot</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #0b0b12;
-            color: #e8e8f0;
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        background:
+            radial-gradient(circle at top, rgba(139, 92, 246, 0.12), transparent 35%),
+            #08080d;
+        color: #d7d7e2;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                     Roboto, Helvetica, Arial, sans-serif;
+        line-height: 1.75;
+    }
+
+    .container {
+        width: min(920px, calc(100% - 32px));
+        margin: 60px auto;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .logo {
+        display: inline-block;
+        margin-bottom: 15px;
+        color: #b77cff;
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+    h1 {
+        margin: 0;
+        color: #ffffff;
+        font-size: clamp(32px, 5vw, 48px);
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        margin-top: 12px;
+        color: #88889c;
+        font-size: 15px;
+    }
+
+    .card {
+        padding: clamp(25px, 5vw, 50px);
+        background: rgba(17, 17, 27, 0.94);
+        border: 1px solid #29293c;
+        border-radius: 18px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    h2 {
+        margin-top: 42px;
+        margin-bottom: 12px;
+        color: #c18aff;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+
+    h2:first-child {
+        margin-top: 0;
+    }
+
+    p {
+        margin: 0 0 15px;
+    }
+
+    ul {
+        margin-top: 8px;
+        padding-left: 25px;
+    }
+
+    li {
+        margin-bottom: 7px;
+    }
+
+    strong {
+        color: #eeeeF5;
+    }
+
+    a {
+        color: #b77cff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .notice {
+        margin: 25px 0;
+        padding: 18px 20px;
+        background: rgba(139, 92, 246, 0.08);
+        border-left: 3px solid #9b63ff;
+        border-radius: 8px;
+    }
+
+    .date {
+        color: #707085;
+        font-size: 13px;
+    }
+
+    footer {
+        margin-top: 25px;
+        text-align: center;
+        color: #626276;
+        font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
         .container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 40px;
-            background: #12121c;
-            border: 1px solid #292943;
-            border-radius: 16px;
+            width: min(100% - 20px, 920px);
+            margin: 25px auto;
         }
 
-        h1 {
-            color: #a970ff;
-            margin-bottom: 5px;
+        .card {
+            padding: 24px 20px;
+            border-radius: 14px;
         }
 
         h2 {
-            color: #c89cff;
-            margin-top: 35px;
+            font-size: 19px;
         }
+    }
+</style>
+```
 
-        p {
-            color: #c9c9d6;
-        }
-
-        .date {
-            color: #77778c;
-            font-size: 14px;
-        }
-
-        a {
-            color: #b984ff;
-        }
-    </style>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>Terms of Service</h1>
-    <p class="date">Última actualización: 11 de agosto de 2026</p>
+```
+<header>
+    <div class="logo">NULLWAKE</div>
 
-    <h2>1. Aceptación de los términos</h2>
+    <h1>Condiciones de Servicio</h1>
+
+    <div class="subtitle">
+        Nullwake Bot
+    </div>
+
+    <div class="date">
+        Última actualización: 11 de agosto de 2026
+    </div>
+</header>
+
+<main class="card">
+
     <p>
-        Al utilizar este bot de Discord, aceptas cumplir estos
-        Términos de Servicio. Si no estás de acuerdo con ellos,
-        debes dejar de utilizar el bot.
+        Estas Condiciones de Servicio ("Condiciones") regulan el uso de
+        <strong>Nullwake Bot</strong> (el "Bot"), un servicio desarrollado
+        y operado por <strong>taoxcito</strong>
+        ("nosotros", "nuestro" o "el desarrollador") dentro de la
+        plataforma Discord.
     </p>
 
-    <h2>2. Uso del bot</h2>
     <p>
-        El bot está diseñado para proporcionar funcionalidades
-        dentro de servidores de Discord. Debes utilizarlo de
-        manera responsable y de acuerdo con las reglas de Discord
-        y las leyes aplicables.
+        Al añadir, utilizar o interactuar con el Bot, aceptas estas
+        Condiciones. Si no estás de acuerdo con ellas, debes dejar de
+        utilizar el Bot y retirarlo de cualquier servidor o cuenta en
+        la que se encuentre instalado.
     </p>
 
-    <h2>3. Conductas prohibidas</h2>
+    <h2>1. Descripción del servicio</h2>
+
     <p>
-        Está prohibido utilizar el bot para actividades ilegales,
-        abusivas, fraudulentas o que puedan perjudicar a otros usuarios,
-        servidores o servicios.
+        Nullwake Bot es una aplicación desarrollada para Discord que puede
+        proporcionar funcionalidades relacionadas con economía virtual,
+        administración, moderación y otras herramientas para servidores
+        y usuarios.
     </p>
 
-    <h2>4. Disponibilidad</h2>
     <p>
-        No garantizamos que el bot esté disponible de forma permanente.
-        El servicio puede experimentar interrupciones, mantenimiento
-        o modificaciones.
+        Las funcionalidades disponibles pueden cambiar, añadirse,
+        modificarse o eliminarse en cualquier momento.
     </p>
 
-    <h2>5. Cambios en el servicio</h2>
+    <h2>2. Requisitos de uso</h2>
+
+    <p>Para utilizar el Bot debes:</p>
+
+    <ul>
+        <li>Tener una cuenta de Discord válida.</li>
+        <li>Cumplir las Condiciones de Servicio y las Directrices de la Comunidad de Discord.</li>
+        <li>Utilizar el Bot únicamente para fines legales y legítimos.</li>
+        <li>Contar con los permisos necesarios para añadir o utilizar el Bot en un servidor.</li>
+    </ul>
+
     <p>
-        Podemos modificar, añadir o eliminar funcionalidades del bot
-        en cualquier momento.
+        El uso del Bot no sustituye las herramientas, sistemas de seguridad
+        o mecanismos de moderación proporcionados por Discord.
     </p>
 
-    <h2>6. Cambios en estos términos</h2>
+    <h2>3. Uso prohibido</h2>
+
+    <p>No está permitido utilizar el Bot para:</p>
+
+    <ul>
+        <li>Realizar actividades ilegales.</li>
+        <li>Intentar obtener acceso no autorizado al Bot, sus sistemas o datos.</li>
+        <li>Explotar errores, vulnerabilidades o fallos del Bot.</li>
+        <li>Interferir deliberadamente con el funcionamiento del Bot.</li>
+        <li>Utilizar automatizaciones abusivas destinadas a sobrecargar el servicio.</li>
+        <li>Intentar manipular, duplicar o alterar fraudulentamente los sistemas de economía virtual.</li>
+        <li>Utilizar el Bot para acosar, amenazar, defraudar o perjudicar a otros usuarios.</li>
+        <li>Utilizar el Bot de cualquier forma que infrinja las políticas de Discord.</li>
+    </ul>
+
     <p>
-        Estos Términos de Servicio pueden actualizarse ocasionalmente.
-        La fecha de la última actualización aparecerá al inicio de esta
-        página.
+        El desarrollador podrá restringir o retirar el acceso al Bot cuando
+        considere que existe un uso abusivo, fraudulento o contrario a
+        estas Condiciones.
     </p>
 
-    <h2>7. Contacto</h2>
+    <h2>4. Economía virtual</h2>
+
     <p>
-        Si tienes preguntas relacionadas con estos términos, puedes
-        contactar con el equipo responsable del bot.
+        El Bot puede incluir sistemas de economía virtual, incluyendo
+        balances, monedas, recompensas u otros valores virtuales.
     </p>
+
+    <div class="notice">
+        Los valores de la economía virtual no representan dinero real,
+        no constituyen activos financieros y no tienen valor monetario
+        fuera de las funcionalidades proporcionadas por el Bot.
+    </div>
+
+    <p>
+        El desarrollador puede modificar balances, recompensas, precios,
+        sistemas económicos o cualquier otra mecánica cuando sea necesario
+        para corregir errores, prevenir abusos o mantener el funcionamiento
+        del Bot.
+    </p>
+
+    <p>
+        No garantizamos que los balances virtuales permanezcan disponibles
+        indefinidamente.
+    </p>
+
+    <h2>5. Moderación</h2>
+
+    <p>
+        El Bot puede proporcionar herramientas destinadas a ayudar a los
+        administradores y moderadores de servidores.
+    </p>
+
+    <p>
+        El uso de estas herramientas corresponde a los administradores y
+        responsables de cada servidor.
+    </p>
+
+    <p>
+        El desarrollador de Nullwake Bot no se responsabiliza de las
+        decisiones de moderación tomadas por administradores utilizando
+        las funcionalidades del Bot.
+    </p>
+
+    <h2>6. Disponibilidad del servicio</h2>
+
+    <p>
+        Intentamos mantener el Bot disponible y funcionando correctamente,
+        pero no garantizamos que el servicio esté disponible de forma
+        permanente o sin interrupciones.
+    </p>
+
+    <p>El Bot puede quedar temporalmente fuera de servicio debido a:</p>
+
+    <ul>
+        <li>Mantenimiento.</li>
+        <li>Actualizaciones.</li>
+        <li>Problemas técnicos.</li>
+        <li>Fallos de Discord o de proveedores externos.</li>
+        <li>Problemas de infraestructura.</li>
+        <li>Circunstancias fuera de nuestro control.</li>
+    </ul>
+
+    <h2>7. Cambios en el Bot</h2>
+
+    <p>
+        Podemos modificar, suspender o descontinuar cualquier funcionalidad
+        del Bot en cualquier momento.
+    </p>
+
+    <h2>8. Suspensión o limitación</h2>
+
+    <p>
+        Podemos limitar, suspender o impedir el acceso al Bot cuando exista
+        evidencia de incumplimiento de estas Condiciones, uso abusivo,
+        intentos de explotación, manipulación, fraude o cualquier uso
+        contrario a las políticas aplicables.
+    </p>
+
+    <h2>9. Responsabilidad</h2>
+
+    <p>
+        El Bot se proporciona "tal cual" y "según disponibilidad".
+    </p>
+
+    <p>
+        En la medida permitida por la legislación aplicable, no garantizamos
+        que el Bot esté libre de errores, interrupciones o pérdidas de
+        información.
+    </p>
+
+    <p>
+        No somos responsables de daños derivados del uso o imposibilidad
+        de uso del Bot, interrupciones del servicio, pérdida de datos,
+        errores en sistemas de economía virtual, acciones realizadas por
+        administradores o usuarios, cambios realizados por Discord o
+        problemas ocasionados por servicios externos.
+    </p>
+
+    <p>
+        Nada de estas Condiciones pretende excluir responsabilidades que
+        legalmente no puedan ser excluidas o limitadas.
+    </p>
+
+    <h2>10. Relación con Discord</h2>
+
+    <p>
+        Nullwake Bot es una aplicación de terceros que funciona mediante
+        Discord.
+    </p>
+
+    <p>
+        Nullwake Bot no es propiedad, patrocinado, respaldado ni
+        administrado por Discord, salvo que se indique expresamente
+        lo contrario.
+    </p>
+
+    <p>
+        El uso del Bot también está sujeto a las políticas y condiciones
+        aplicables de Discord.
+    </p>
+
+    <p>
+        <a href="https://discord.com/terms" target="_blank" rel="noopener">
+            Ver las Condiciones de Servicio de Discord
+        </a>
+    </p>
+
+    <h2>11. Propiedad intelectual</h2>
+
+    <p>
+        El código, diseño, nombre, logotipos, elementos gráficos y demás
+        componentes propios de Nullwake Bot pertenecen a sus respectivos
+        propietarios.
+    </p>
+
+    <p>
+        No se concede ninguna licencia sobre dichos elementos salvo que
+        se indique expresamente.
+    </p>
+
+    <h2>12. Cambios en estas Condiciones</h2>
+
+    <p>
+        Podemos actualizar estas Condiciones ocasionalmente para reflejar
+        cambios en el servicio o requisitos aplicables.
+    </p>
+
+    <p>
+        La versión vigente será publicada en esta página y su fecha de
+        actualización aparecerá al principio del documento.
+    </p>
+
+    <h2>13. Contacto</h2>
+
+    <p>
+        Para preguntas o asuntos relacionados con estas Condiciones:
+    </p>
+
+    <p>
+        <strong>Correo:</strong>
+        [taoxcito@proton.me]
+    </p>
+
+    <p>
+        <strong>Discord:</strong>
+        [taoxcito]
+    </p>
+
+</main>
+
+<footer>
+    © 2026 Nullwake · Nullwake Bot
+</footer>
+```
 
 </div>
 
